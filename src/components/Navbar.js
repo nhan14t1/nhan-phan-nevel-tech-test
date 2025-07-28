@@ -54,13 +54,13 @@ export default function Navbar() {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-2">
             {navItems.map((item, index) => (
               <motion.a
                 key={item}
                 href="#"
                 whileHover={{ y: -2, color: "#fbbf24" }}
-                className="text-gray-300 hover:text-yellow-400 transition-colors font-medium"
+                className={`hover:text-yellow-400 transition-colors font-medium px-4 py-2 ${index == 0 && 'bg-[#383A42] rounded-full text-[#FFC700]'}`}
               >
                 {item}
               </motion.a>
