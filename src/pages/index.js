@@ -48,43 +48,9 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="relative bg-gradient-to-r from-purple-900 via-purple-700 to-pink-600 py-20 px-4 overflow-hidden"
+        className="relative bg-gradient-to-r from-purple-900 via-purple-700 to-pink-600 overflow-hidden"
       >
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <motion.div
-              initial={{ x: -50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                THINGS TO CHECK
-                <br />
-                BEFORE BUYING
-                <br />
-                <span className="text-pink-400">NFTS</span>
-              </h1>
-            </motion.div>
-            <motion.div
-              initial={{ x: 50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="flex justify-center"
-            >
-              <div className="relative">
-                <img
-                  src="/placeholder.svg?height=300&width=250"
-                  alt="NFT Artwork"
-                  className="rounded-lg shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300"
-                />
-                <div className="absolute -top-4 -left-4 w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">😎</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
+        <img src="/images/banner.png" />
       </motion.section>
 
       {/* Features Section */}
@@ -93,7 +59,7 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="py-12 px-4 bg-gray-800"
+        className="py-12 px-4 bg-basebg"
       >
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-6 gap-6">
@@ -123,7 +89,7 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="py-16 px-4"
+        className="py-16 px-4 bg-mainbg"
       >
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-8">
@@ -165,7 +131,7 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="py-16 px-4"
+        className="py-16 px-4 bg-mainbg"
       >
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
