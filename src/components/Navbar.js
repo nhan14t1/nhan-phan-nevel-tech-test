@@ -37,7 +37,7 @@ export default function Navbar() {
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="flex items-center justify-between p-4 bg-gray-800/50 backdrop-blur-sm"
+        className="flex items-center justify-between p-4 md:px-8 bg-mainbg backdrop-blur-sm"
       >
         {/* Mobile Menu Button */}
         <button
@@ -60,7 +60,7 @@ export default function Navbar() {
                 key={item}
                 href="#"
                 whileHover={{ y: -2, color: "#fbbf24" }}
-                className={`hover:text-yellow-400 transition-colors font-medium px-4 py-2 ${index == 0 && 'bg-[#383A42] rounded-full text-[#FFC700]'}`}
+                className={`hover:text-hover transition-colors font-medium px-4 py-2 ${index == 0 && 'bg-[#383A42] rounded-full text-primary'}`}
               >
                 {item}
               </motion.a>
@@ -70,8 +70,8 @@ export default function Navbar() {
 
         {/* Auth Buttons */}
         <div className="flex space-x-2">
-          <Button className="bg-[#FFC700] hover:bg-[#C79B12] text-black font-semibold italic">SIGN UP</Button>
-          <Button className="bg-gray-900 hover:bg-gray-700 bg-transparent border border-[#C79B12] font-semibold italic">
+          <Button className="bg-primary hover:bg-hover text-black font-semibold italic">SIGN UP</Button>
+          <Button className="bg-gray-900 hover:bg-gray-700 bg-transparent border border-primary font-semibold italic">
             LOG IN
           </Button>
         </div>
@@ -85,24 +85,23 @@ export default function Navbar() {
             animate="visible"
             exit="exit"
             variants={mobileMenuVariants}
-            className="fixed inset-0 bg-gray-900/95 backdrop-blur-sm z-50 md:hidden"
+            className="fixed inset-0 bg-basegb backdrop-blur-sm z-50 md:hidden"
           >
-            <div className="p-4">
-              <div className="flex items-center justify-between mb-8">
-                <button
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="p-2 hover:bg-gray-700 rounded-lg transition-colors"
-                >
-                  <MdOutlineClose size={24} />
-                </button>
-                <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 bg-yellow-500 rounded flex items-center justify-center">
-                    <span className="text-black font-bold text-sm">⚡</span>
+            <div>
+              <div className="flex items-center justify-between mb-8 p-4 bg-mainbg">
+                <div className="flex items-center">
+                  <button
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="p-2 hover:bg-gray-700 rounded-lg transition-colors mr-2"
+                  >
+                    <MdOutlineClose size={24} />
+                  </button>
+                  <div className="flex items-center">
+                    <img src="/images/white-logo.svg" />
                   </div>
-                  <span className="text-yellow-500 font-bold text-xl">TECH</span>
                 </div>
                 <div className="flex space-x-2">
-                  <Button className="bg-[#FFC700] hover:bg-[#C79B12] text-black font-semibold rounded-full p-4">
+                  <Button className="bg-primary hover:bg-hover text-black font-semibold rounded-full p-4">
                     SIGN UP
                   </Button>
                   <Button
@@ -115,7 +114,7 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <nav className="space-y-6">
+              <nav className="space-y-6 p-4 pt-2 -mt-4">
                 {navItems.map((item, index) => (
                   <motion.a
                     key={item}
@@ -123,7 +122,7 @@ export default function Navbar() {
                     initial={{ x: -50, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: index * 0.1 }}
-                    className="block text-xl font-medium text-gray-300 hover:text-yellow-400 transition-colors py-2"
+                    className={`block text-xl font-medium text-gray-300 hover:text-yellow-400 transition-colors py-2 w-full text-center ${index == 0 && 'bg-[#383A42] rounded-full text-primary'}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item}

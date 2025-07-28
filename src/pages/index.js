@@ -42,7 +42,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <motion.section
         initial={{ opacity: 0 }}
