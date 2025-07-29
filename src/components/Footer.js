@@ -29,12 +29,12 @@ export default function Footer() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="bg-gray-900 py-16 px-4 border-t border-gray-800"
+      className="bg-mainbg py-16 px-4 md:px-32 border-t border-gray-800"
     >
-      <div className="max-w-7xl mx-auto">
+      <div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <motion.div variants={itemVariants}>
-            <h4 className="font-bold text-yellow-400 mb-4">ABOUT US</h4>
+            <h4 className="font-bold text-white italic mb-4">ABOUT US</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
@@ -70,7 +70,7 @@ export default function Footer() {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <h4 className="font-bold text-yellow-400 mb-4">PRODUCTS</h4>
+            <h4 className="font-bold text-white italic mb-4">PRODUCTS</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
@@ -106,7 +106,7 @@ export default function Footer() {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <h4 className="font-bold text-yellow-400 mb-4">RESOURCES</h4>
+            <h4 className="font-bold text-white italic mb-4">RESOURCES</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
@@ -137,14 +137,12 @@ export default function Footer() {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <h4 className="font-bold text-yellow-400 mb-4">CONTACT US</h4>
+            <h4 className="font-bold text-white italic mb-4">CONTACT US</h4>
             <ul className="space-y-2 text-gray-400">
               <li>support@tech.email</li>
               <li>affiliate@tech.com</li>
             </ul>
-            <motion.div whileHover={{ scale: 1.05 }} className="mt-4 bg-gray-800 rounded-lg p-3 cursor-pointer">
-              <span className="text-sm">📱 Install App</span>
-            </motion.div>
+            <motion.img whileHover={{ scale: 1.05 }} className="mt-4 cursor-pointer" src="/images/app.png" />
           </motion.div>
         </div>
       </div>
