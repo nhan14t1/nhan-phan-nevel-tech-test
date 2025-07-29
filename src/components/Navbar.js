@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { HiMenuAlt2 } from "react-icons/hi";
 import { MdOutlineClose } from "react-icons/md";
 import Button from "@/components/buttons/Button";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -50,7 +51,9 @@ export default function Navbar() {
         <div className="flex items-center">
           {/* Logo */}
           <motion.div whileHover={{ scale: 1.05 }} className="flex items-center space-x-2 mr-8">
-            <img src="/images/white-logo.svg" />
+            <Link href={'/'}>
+              <img src="/images/white-logo.svg" />
+            </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -71,7 +74,7 @@ export default function Navbar() {
         {/* Auth Buttons */}
         <div className="flex space-x-2">
           <Button className="bg-primary hover:bg-hover text-black font-semibold italic">SIGN UP</Button>
-          <Button className="bg-gray-900 hover:bg-gray-700 bg-transparent border border-primary font-semibold italic">
+          <Button className="bg-transparent border border-primary hover:border-[#ffe8ab] font-semibold italic">
             LOG IN
           </Button>
         </div>
@@ -101,13 +104,13 @@ export default function Navbar() {
                   </div>
                 </div>
                 <div className="flex space-x-2">
-                  <Button className="bg-primary hover:bg-hover text-black font-semibold rounded-full p-4">
+                  <Button className="bg-primary hover:bg-hover text-black font-semibold rounded-full p-4 italic">
                     SIGN UP
                   </Button>
                   <Button
                     size="sm"
                     variant="outline"
-                    className="border-gray-600 text-white hover:bg-gray-700 bg-transparent"
+                    className="border border-primary hover:border-[#ffe8ab] text-white bg-transparent italic"
                   >
                     LOG IN
                   </Button>
