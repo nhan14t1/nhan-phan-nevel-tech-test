@@ -38,7 +38,7 @@ export default function Navbar() {
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="flex items-center justify-between p-4 md:px-8 bg-mainbg backdrop-blur-sm"
+        className="fixed top-0 left-0 w-full z-[1000] flex items-center justify-between p-4 md:px-8 bg-mainbg backdrop-blur-sm"
       >
         {/* Mobile Menu Button */}
         <button
@@ -88,7 +88,7 @@ export default function Navbar() {
             animate="visible"
             exit="exit"
             variants={mobileMenuVariants}
-            className="fixed inset-0 bg-basegb backdrop-blur-sm z-50 md:hidden"
+            className="fixed z-[1001] inset-0 bg-basegb backdrop-blur-sm z-50 md:hidden"
           >
             <div>
               <div className="flex items-center justify-between mb-8 p-4 bg-mainbg">
